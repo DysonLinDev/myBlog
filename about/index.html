@@ -10,7 +10,7 @@
   
   <title>
     
-      Dyson&#39;s Blog
+      About | Dyson&#39;s Blog
     
   </title>
   <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -137,37 +137,53 @@
   </div>
 </header>
 
-    <div id="article-banner">
-  <h2>Archives</h2>
-</div>
-<main class="app-body" id="archives">
-  
-  
-  
-    <section class="time-section">
-  <h1 class="section-year">
-    2020
-  </h1>
-  <div class="section-list">
-    
-    
-      <div class="section-list-item">
-        <a href="/myBlog/hello-world/" class="archive-title">Hello World</a>
-        <p class="archive-date">04-13</p>
-      </div>
-    
+    <div id="about-banner" style="background-image: url()"></div>
+<div class="author">
+  <div class="head">
+    <img src="https://avatars1.githubusercontent.com/u/6938358?s=460&u=52d4acb281b324d6abf6e54b9c03712825006ab1&v=4" />
   </div>
-</section>
+  <h3>Dyson Lin</h3>
   
-</main>
+    <p class="description">It's never too late to start.</p>
+  
+  <section class="share-icons">
+    
+    
+    
+      <a class="icon-github" href="https://github.com/DysonLinDev" target="_blank">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    
+    
+      <a class="icon-linkedin" href="https://www.linkedin.com/in/sting-lin-dev" target="_blank">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    
+    
+    
+  </section>
+</div>
 
 <script>
   (function () {
-    var url = 'https://dysonlindev.github.io/archives/2020/index.html';
-    $('#article-banner').geopattern(url);
-    $('.header').removeClass('fixed-header');
+    $('.header').removeClass('fixed-header')
+    var windowH = $(window).height();
+    var author = $('.author')
+    var bodyH = author.offset().top + author[0].offsetHeight + 71;
+    if (bodyH < windowH) {
+      author.css({
+        'margin-bottom': windowH - bodyH
+      })
+    }
   })();
 </script>
+
     <div class="scroll-top">
   <span class="arrow-icon"></span>
 </div>
