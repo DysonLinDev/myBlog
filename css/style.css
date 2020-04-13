@@ -780,10 +780,10 @@ h2.article-head {
   width: 100%;
   height: 100%;
   content: '';
-  opacity: 1;
+  opacity: 0.9;
   background: url("images/banner-about.jpg");
   background-color: rgba(0,0,0,0.05);
-  background-position: bottom;
+  background-position: center;
 }
 @media screen and (max-width: 480px) {
   #about-banner {
