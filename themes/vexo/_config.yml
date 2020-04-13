@@ -1,0 +1,36 @@
+author: DysonLin # 作者
+description: DysonLin's blog
+favicon: 
+
+excerpt_link: Read more
+
+menu:
+ Home: /
+ Tags: /tags/
+ Archives: /archives/
+ Projects: /project/
+ About: /about/
+
+# highlight
+highlight:
+  tomorrow
+
+# catalog
+catalog: true
+
+#GA
+google_analytics:
+
+about: 
+  # banner: https://images.unsplash.com/photo-1578922746465-3a80a228f223?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1727&q=60
+  # banner: /images/banner-about.jpg
+  avatar: https://avatars1.githubusercontent.com/u/6938358?s=460&u=52d4acb281b324d6abf6e54b9c03712825006ab1&v=4
+  description: "It's never too late to start."
+  github_username: DysonLinDev
+  linkedin_username: sting-lin-dev
+
+# MathJax Support
+mathjax:
+  enable: true
+  per_page: false
+  cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML
