@@ -10,7 +10,7 @@
   
   <title>
     
-      Hello World | Dyson&#39;s Blog
+      Hello Hexo! | Dyson&#39;s Blog
     
   </title>
   <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -138,7 +138,7 @@
 </header>
 
     <div id="article-banner">
-  <h2>Hello World</h2>
+  <h2>Hello Hexo!</h2>
   <p class="post-date">2020-04-13</p>
   <div class="arrow-down">
     <a href="javascript:;"></a>
@@ -147,21 +147,42 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+    <section class="markdown-content"><h1 id="Hello-Hexo"><a href="#Hello-Hexo" class="headerlink" title="Hello Hexo!"></a>Hello <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>!</h1><h2 id="Why-Hexo"><a href="#Why-Hexo" class="headerlink" title="Why Hexo"></a>Why Hexo</h2><p>Hexo is a decent and simple open source blog framework and it brings github page and travis CI togethe, which makes developers build your own blog in seconds. </p>
+<h2 id="Tips-for-Hexo-beginners"><a href="#Tips-for-Hexo-beginners" class="headerlink" title="Tips for Hexo beginners"></a>Tips for Hexo beginners</h2><p>Here’s are some tips that official document probably doesn’t metion:</p>
+<h3 id="1-Github-page-gh-page"><a href="#1-Github-page-gh-page" class="headerlink" title="1. Github page (gh-page)"></a>1. Github page (gh-page)</h3><p>Don’t put your hexo code in master. Master branch is the one that github page uses to host your blog.</p>
+<h3 id="2-Travis-yml"><a href="#2-Travis-yml" class="headerlink" title="2. Travis yml"></a>2. Travis yml</h3><p>Following the document makes you confused if you haven’t use travis before.</p>
+<p>Here’s some points that makes you more easier to setup.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## .travis.yml</span></span><br><span class="line"><span class="attr">branches:</span></span><br><span class="line">  <span class="attr">only:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">hexo</span> <span class="comment"># build hexo branch only</span></span><br><span class="line"><span class="attr">script:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">hexo</span> <span class="string">generate</span> <span class="comment"># generate static files</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">provider:</span> <span class="string">pages</span></span><br><span class="line">  <span class="attr">skip-cleanup:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">github-token:</span> <span class="string">$GH_TOKEN</span></span><br><span class="line">  <span class="attr">keep-history:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">target_branch:</span> <span class="string">master</span> <span class="comment"># The one we put blog content </span></span><br><span class="line">  <span class="attr">on:</span></span><br><span class="line">    <span class="attr">branch:</span> <span class="string">hexo</span> <span class="comment"># The one we host hexo source</span></span><br><span class="line">  <span class="attr">local-dir:</span> <span class="string">public</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="3-Theme-and-plugin"><a href="#3-Theme-and-plugin" class="headerlink" title="3. Theme and plugin"></a>3. Theme and plugin</h3><p>Now, your blog should be running and it’s time to choose a good layout.<br><a href="https://hexo.io/themes/" target="_blank" rel="noopener">Theme</a> &amp; <a href="https://hexo.io/plugins/" target="_blank" rel="noopener">Plugin</a> save you time.</p>
+<h3 id="4-Hot-reload"><a href="#4-Hot-reload" class="headerlink" title="4. Hot reload"></a>4. Hot reload</h3><p>One more thing, if you feel uncomfortable without auto-reload.<br>Here is it: </p>
+<p>run</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-browsersync --save</span><br></pre></td></tr></table></figure>
+<p>and do ‘hexo server’. </p>
+<p>There you go!</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br><span class="line">INFO  Start processing</span><br><span class="line">[Browsersync] Access URLs:</span><br><span class="line"> ----------------------------------</span><br><span class="line">          UI: http://localhost:3001</span><br><span class="line"> ----------------------------------</span><br><span class="line"> UI External: http://localhost:3001</span><br><span class="line"> ----------------------------------</span><br><span class="line">INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h2 id="The-journey-just-starts"><a href="#The-journey-just-starts" class="headerlink" title="The journey just starts!"></a>The journey just starts!</h2><p>Sharing knowledge and life with you. See you soon.</p>
 </section>
     <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/myBlog/myBlog/tags#Hexo" >
+    <span class="tag-code">Hexo</span>
+  </a>
+
+  <a href="/myBlog/myBlog/tags#Github" >
+    <span class="tag-code">Github</span>
+  </a>
+
+  <a href="/myBlog/myBlog/tags#Travis" >
+    <span class="tag-code">Travis</span>
+  </a>
+
+      </div>
     
     <!-- Tags END -->
     <!-- NAV START -->
@@ -184,7 +205,7 @@
   <div class="toc-main">
     <strong class="toc-title">Catalog</strong>
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Quick-Start"><span class="toc-nav-text">Quick Start</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Create-a-new-post"><span class="toc-nav-text">Create a new post</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Run-server"><span class="toc-nav-text">Run server</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Generate-static-files"><span class="toc-nav-text">Generate static files</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Deploy-to-remote-sites"><span class="toc-nav-text">Deploy to remote sites</span></a></li></ol></li></ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Hello-Hexo"><span class="toc-nav-text">Hello Hexo!</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Why-Hexo"><span class="toc-nav-text">Why Hexo</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Tips-for-Hexo-beginners"><span class="toc-nav-text">Tips for Hexo beginners</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-Github-page-gh-page"><span class="toc-nav-text">1. Github page (gh-page)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-Travis-yml"><span class="toc-nav-text">2. Travis yml</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-Theme-and-plugin"><span class="toc-nav-text">3. Theme and plugin</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-Hot-reload"><span class="toc-nav-text">4. Hot reload</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#The-journey-just-starts"><span class="toc-nav-text">The journey just starts!</span></a></li></ol></li></ol>
     
   </div>
 </aside>
