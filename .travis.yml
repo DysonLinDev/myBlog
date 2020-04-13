@@ -17,3 +17,4 @@ deploy:
   on:
     branch: hexo
   local-dir: public
+  commit_message: Site updated by Travis - now('YYYY-MM-DD HH:mm:ss')
